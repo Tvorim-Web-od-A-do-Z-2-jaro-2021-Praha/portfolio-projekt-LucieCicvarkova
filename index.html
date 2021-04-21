@@ -1,12 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test stranka</title>
+    <title>Lucie Cicvárková</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia magni commodi reprehenderit repellat incidunt veniam suscipit voluptatibus fugit nam doloribus aspernatur repudiandae quia, iusto natus ullam sequi eius nostrum!</p>
+    <header class="header header--background-grey">
+        <div class="header__top"></div>
+        <div class="header__title">
+            <div class="header__title-fname">LUCIE</div>
+            <div class="header__title-sname">CICVÁRKOVÁ</div>
+        </div>
+    </header>
+
+    <section class="about-me about-me--background-white">
+        <div class="about-me__container">
+            <h2>O MNĚ</h2>
+            <div class="about-me__text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab accusantium neque consequatur voluptates
+                nisi
+                quisquam delectus incidunt tenetur? Omnis, saepe quam minus tempore dolore error dolorum iste quis
+                sapiente
+                aperiam?
+            </div>
+            <img class="about-me__photo" src="https://picsum.photos/150">
+        </div>
+    </section>
+
+    <section class="my-work my-work--background-grey">
+        <div class="my-work__container">
+        <h2>CO DĚLÁM</h2>        
+            <div class="my-work__box">Překlady</div>
+            <div class="my-work__box">HTML/CSS</div>
+            <div class="my-work__box">JS</div>
+            <div class="my-work__box">React</div>
+        </div>
+    </section>
+
+    <section class="my-projects my-projects--background-white">
+        <div class="my-projects__container">
+        <h2>PROJEKTY</h2>
+        <div class="my-projects__web-heading">
+        <h3>Web</h3> 
+        <p>Návrh prezentačního webu</p>
+        </div>
+        <div class="my-projects__web-picture"><img src="https://picsum.photos/150/80"></div>
+        <div class="my-projects__web-link"><a href="">Kód na GitLabu</a></div>
+        <div class="my-projects__react-heading">
+            <h3>React</h3> 
+        <p>Aplikace pro výpočet skóre hry</p>
+        </div>
+        <div class="my-projects__react-picture"><img src="https://picsum.photos/150/80"></div>
+        <div class="my-projects__react-heading"><a href="">Kód na GitLabu</a></div>
+    </div>
+    </section>
+
+    <section class="contact contact--background-grey">
+        <h2>KONTAKT</h2>
+        <p>lucie.cicvarkova@email.cz</p>
+    </section>
+
+    <footer class="footer footer--background-red">&copy Lucie Cicvárková 2021</footer>
 </body>
+
 </html>
