@@ -7,12 +7,9 @@ $odd-background-color: rgb(245, 244, 240);
 $even-background-color: white;
 
 @mixin box-properties() {
-  width: 70px;
-  height: 70px;
-  margin: 10px;
-  border-radius: 10%;
-  align-self: center;
-  justify-self: center;
+  background-color: $odd-background-color;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 html {
@@ -41,7 +38,7 @@ h2 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 20px; 
 }
 
 section {
@@ -53,27 +50,26 @@ section {
 .header {
   height: 200px;
   background-color: $odd-background-color;
-}
-
-.header__top {
-  width: 100%;
-  height: 20px;
-  background-color: $contrast-color;
-}
-
-.header__title {
-  margin: 50px auto;
-}
-
-.header__title-fname {
-  font-size: 40px;
-  color: $contrast-color;
-  letter-spacing: 2px;
-}
-
-.header__title-sname {
-  font-size: 20px;
-  color: $contrast-color;
+  &__top {
+    width: 100%;
+    height: 20px;
+    background-color: $contrast-color;
+  }
+  &__title {
+    margin: 50px auto;
+  }
+  &__title-fname {
+    font-size: 40px;
+    color: $contrast-color;
+    letter-spacing: 2px;
+  }
+  &__title-sname {
+    font-size: 20px;
+    color: $contrast-color;
+  }
+  &__photo {
+    width: 150px;
+  }
 }
 
 /*-----------------------------------------*/
@@ -137,69 +133,11 @@ section {
   }
 }
 
-/*------Cvičení-----------------
-
-.practice {
-  background-color: $odd-background-color;
-
-  &__container {
-    width: 70%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(90px, 150px));
-    grid-template-rows: repeat(3, auto);
-    grid-gap: 10px;
-    place-content: center;
-
-    h2 {
-      grid-column: 1/5;
-      grid-row: 1/2;
-    }
-  }
-
-  &__text-in-box {
-    height: 1rem;
-    margin-top: calc((100% - 1rem) / 2);
-  }
-
-  &__box--green {
-    background-color: rgb(127, 210, 186);
-    @include box-properties();
-  }
-
-  &__box--yellow {
-    background-color: rgb(255, 218, 117);
-    @include box-properties();
-  }
-
-  &__box--blue {
-    background-color: rgb(166, 223, 247);
-    @include box-properties();
-  }
-
-  &__box--pink {
-    background-color: rgb(212, 161, 182);
-    @include box-properties();
-  }
-}
-
-@media (max-width: 600px) {
-  .practice {
-    &__container {
-      grid-template-columns: auto auto;
-      grid-auto-rows: auto;
-      grid-gap: 10px;
-
-      h2 {
-        grid-column: 1/3;
-        grid-row: 1/2;
-      }
-    }
-  }
-}
---------------------------------*/
 .my-work {
-  background-color: $odd-background-color;
+  background-color: $odd-background-color;  
+ h2 {
+   color: $contrast-color;
+ }
   &__container {
     width: 80%;
     margin: 0 auto;
@@ -280,15 +218,19 @@ section {
     grid-row: 1/2;
     grid-column: 1/3;
   }
+ 
   &__project--web {
     place-items: start;
     grid-row: 2/3;
     grid-column: 1/2;
+    @include box-properties();
   }
   &__project--react {
     place-items: start;
     grid-row: 2/3;
     grid-column: 2/3;
+    @include box-properties();
+  
   }
   a {
     color: $primary-color;
@@ -336,6 +278,9 @@ section {
 /*-------------------------------------------*/
 .contact {
   background-color: $odd-background-color;
+  h2 {
+    color: $contrast-color;
+  }
 }
 
 /*---------------------------------------------*/
@@ -413,15 +358,12 @@ section {
 
 /*Ikona JS*/
 #JS-icon {
-  min-width: 88px;
-}
-
-#J-letter,
-#S-letter {
-  transform-origin: 50% 57%;
-}
-#JS-icon {
+  min-width: 88px;  
   &:hover {
+    circle {
+      transition: fill 0.6s ease-in-out;
+      fill:#f0db4f;
+    }
     #J-letter {
       animation: resize-letter 1.2s ease;
     }
@@ -431,12 +373,21 @@ section {
   }
 }
 
+#J-letter,
+#S-letter {
+  transform-origin: 50% 57%;
+}
+
 /*Ikona React*/
 #react-icon {
   width: 75px;
   padding-top: 8px;
+  .st0 {
+    fill: black;
+  }
   &:hover {
     .st0 {
+      fill: #00d8ff;
       animation: rotateZ 5s ease;
     }
     #circle {

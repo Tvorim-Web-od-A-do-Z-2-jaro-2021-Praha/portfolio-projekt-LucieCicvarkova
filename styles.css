@@ -62,6 +62,10 @@ section {
   color: #d14b43;
 }
 
+.header__photo {
+  width: 150px;
+}
+
 /*-----------------------------------------*/
 .about-me {
   background-color: white;
@@ -138,69 +142,12 @@ section {
   }
 }
 
-/*------Cvičení-----------------
-
-.practice {
-  background-color: $odd-background-color;
-
-  &__container {
-    width: 70%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(90px, 150px));
-    grid-template-rows: repeat(3, auto);
-    grid-gap: 10px;
-    place-content: center;
-
-    h2 {
-      grid-column: 1/5;
-      grid-row: 1/2;
-    }
-  }
-
-  &__text-in-box {
-    height: 1rem;
-    margin-top: calc((100% - 1rem) / 2);
-  }
-
-  &__box--green {
-    background-color: rgb(127, 210, 186);
-    @include box-properties();
-  }
-
-  &__box--yellow {
-    background-color: rgb(255, 218, 117);
-    @include box-properties();
-  }
-
-  &__box--blue {
-    background-color: rgb(166, 223, 247);
-    @include box-properties();
-  }
-
-  &__box--pink {
-    background-color: rgb(212, 161, 182);
-    @include box-properties();
-  }
-}
-
-@media (max-width: 600px) {
-  .practice {
-    &__container {
-      grid-template-columns: auto auto;
-      grid-auto-rows: auto;
-      grid-gap: 10px;
-
-      h2 {
-        grid-column: 1/3;
-        grid-row: 1/2;
-      }
-    }
-  }
-}
---------------------------------*/
 .my-work {
   background-color: #f5f4f0;
+}
+
+.my-work h2 {
+  color: #d14b43;
 }
 
 .my-work__container {
@@ -328,6 +275,9 @@ section {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+  background-color: #f5f4f0;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .my-projects__project--react {
@@ -338,6 +288,9 @@ section {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+  background-color: #f5f4f0;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .my-projects a {
@@ -395,6 +348,10 @@ section {
 /*-------------------------------------------*/
 .contact {
   background-color: #f5f4f0;
+}
+
+.contact h2 {
+  color: #d14b43;
 }
 
 /*---------------------------------------------*/
@@ -518,10 +475,10 @@ section {
   min-width: 88px;
 }
 
-#J-letter,
-#S-letter {
-  -webkit-transform-origin: 50% 57%;
-          transform-origin: 50% 57%;
+#JS-icon:hover circle {
+  -webkit-transition: fill 0.6s ease-in-out;
+  transition: fill 0.6s ease-in-out;
+  fill: #f0db4f;
 }
 
 #JS-icon:hover #J-letter {
@@ -534,13 +491,24 @@ section {
           animation: resize-letter 1.2s ease;
 }
 
+#J-letter,
+#S-letter {
+  -webkit-transform-origin: 50% 57%;
+          transform-origin: 50% 57%;
+}
+
 /*Ikona React*/
 #react-icon {
   width: 75px;
   padding-top: 8px;
 }
 
+#react-icon .st0 {
+  fill: black;
+}
+
 #react-icon:hover .st0 {
+  fill: #00d8ff;
   -webkit-animation: rotateZ 5s ease;
           animation: rotateZ 5s ease;
 }
