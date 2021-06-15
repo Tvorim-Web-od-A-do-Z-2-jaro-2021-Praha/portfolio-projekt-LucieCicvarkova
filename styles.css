@@ -62,6 +62,10 @@ section {
   color: #d14b43;
 }
 
+.header__photo {
+  width: 150px;
+}
+
 /*-----------------------------------------*/
 .about-me {
   background-color: white;
@@ -138,98 +142,95 @@ section {
   }
 }
 
-/*------Cvičení------------------*/
-.practice {
+.my-work {
   background-color: #f5f4f0;
 }
 
-.practice__container {
-  width: 70%;
-  margin: auto;
+.my-work h2 {
+  color: #d14b43;
+}
+
+.my-work__container {
+  width: 80%;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(90px, 150px))[4];
-      grid-template-columns: repeat(4, minmax(90px, 150px));
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
-  grid-gap: 10px;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  grid-row-gap: 50px;
+  grid-column-gap: 40px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   place-content: center;
 }
 
-.practice__container h2 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1/5;
+.my-work h2 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / span 4;
 }
 
-.practice__text-in-box {
-  height: 1rem;
-  margin-top: calc((100% - 1rem) / 2);
+.my-work__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.practice__box--green {
-  background-color: #7fd2ba;
-  width: 70px;
-  height: 70px;
-  margin: 10px;
-  border-radius: 10%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+.my-work__heading {
+  height: 111px;
 }
 
-.practice__box--yellow {
-  background-color: #ffda75;
-  width: 70px;
-  height: 70px;
-  margin: 10px;
-  border-radius: 10%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+.my-work__icon-wrapper {
+  max-width: 100px;
+  min-width: 70px;
 }
 
-.practice__box--blue {
-  background-color: #a6dff7;
-  width: 70px;
-  height: 70px;
-  margin: 10px;
-  border-radius: 10%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+.my-work__icon-wrapper--lang {
+  padding-top: 4px;
 }
 
-.practice__box--pink {
-  background-color: #d4a1b6;
-  width: 70px;
-  height: 70px;
-  margin: 10px;
-  border-radius: 10%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+.my-work__icon-wrapper--html {
+  padding-top: 3px;
+}
+
+.my-work__title {
+  font-weight: bold;
+}
+
+.my-work__title--lang {
+  padding-top: 7px;
+}
+
+.my-work__title--html {
+  padding-top: 9px;
+}
+
+.my-work__title--react {
+  padding-top: 3px;
 }
 
 @media (max-width: 600px) {
-  .practice__container {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+  .my-work__container {
+    width: 70%;
+    -ms-grid-columns: (minmax(100px, 50%))[2];
+        grid-template-columns: repeat(2, minmax(100px, 50%));
     grid-auto-rows: auto;
-    grid-gap: 10px;
+    grid-gap: 30px;
   }
-  .practice__container h2 {
+  .my-work__container h2 {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
@@ -239,31 +240,6 @@ section {
   }
 }
 
-/*------------------------------------------------
-     to replace for the practice section
-
-    .my-work {
-        background-color: $odd-background-color;
-
-        &__container {
-            width                : 50%;
-            margin               : 0 auto;
-            display              : grid;
-            grid-template-rows   : repeat(2, auto);
-            grid-template-columns: repeat(4, 25%);
-            grid-gap             : 20px;
-        }
-
-        h2 {
-            grid-row   : 1/span 1;
-            grid-column: 1/span 4;
-        }
-
-        &__box {
-            grid-row: 2/2;
-        }
-    }
- */
 /*-------------------------------------*/
 .my-projects {
   background-color: white;
@@ -274,12 +250,12 @@ section {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
-  -ms-grid-columns: (33%)[3];
-      grid-template-columns: repeat(3, 33%);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
   grid-gap: 20px;
-  place-items: center;
+  place-content: center;
 }
 
 .my-projects h2 {
@@ -287,23 +263,59 @@ section {
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1/4;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.my-projects__project--web {
+  place-items: start;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  background-color: #f5f4f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.my-projects__project--react {
+  place-items: start;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  background-color: #f5f4f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.my-projects a {
+  color: #585858;
+  text-decoration: none;
+}
+
+.my-projects a:hover {
+  font-weight: bold;
+  color: #d14b43;
+}
+
+.my-projects a:hover #link-icon path {
+  fill: #d14b43;
+}
+
+.my-projects__link--icon {
+  vertical-align: middle;
 }
 
 @media (max-width: 900px) {
-  .my-projects__web-picture {
-    display: none;
-  }
-  .my-projects__react-picture {
-    display: none;
-  }
   .my-projects__container {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
-    -ms-grid-rows: (auto)[3];
-        grid-template-rows: repeat(3, auto);
-    grid-gap: 0;
+    grid-auto-rows: auto;
   }
   .my-projects h2 {
     -ms-grid-row: 1;
@@ -313,12 +325,23 @@ section {
     -ms-grid-column-span: 1;
     grid-column: 1/2;
   }
-  .my-projects h3 {
+  .my-projects__project--web {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
-    margin-top: 40px;
-    margin-bottom: 0;
+    place-items: center;
+  }
+  .my-projects__project--react {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    place-items: center;
   }
 }
 
@@ -327,10 +350,191 @@ section {
   background-color: #f5f4f0;
 }
 
+.contact h2 {
+  color: #d14b43;
+}
+
 /*---------------------------------------------*/
 .footer--background-red {
   background-color: #d14b43;
   color: white;
   padding: 20px;
+}
+
+/*--------------Animace SVG ikon----------------*/
+/*Ikona překladatel*/
+#lang-skill-icon {
+  width: 70px;
+  padding-top: 6px;
+  -webkit-transition: -webkit-animation 1.5s;
+  transition: -webkit-animation 1.5s;
+  transition: animation 1.5s;
+  transition: animation 1.5s, -webkit-animation 1.5s;
+}
+
+#lang-skill-icon:hover #earth {
+  -webkit-animation: rotateY 2s ease;
+          animation: rotateY 2s ease;
+}
+
+#lang-skill-icon:hover #border {
+  -webkit-animation: resize 1.2s ease;
+          animation: resize 1.2s ease;
+}
+
+#earth,
+#border {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@-webkit-keyframes rotateY {
+  to {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes rotateY {
+  to {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes resize {
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes resize {
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/*Ikona HTML*/
+#html-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 0px;
+  -webkit-transition: fill 0.4s ease-in-out;
+  transition: fill 0.4s ease-in-out;
+}
+
+#html-icon:hover {
+  fill: #e54d26;
+}
+
+#html-icon:hover #inner-letter {
+  -webkit-animation: resize-letter 1.2s ease;
+          animation: resize-letter 1.2s ease;
+}
+
+#inner-letter {
+  -webkit-transform-origin: 50% 57%;
+          transform-origin: 50% 57%;
+}
+
+@-webkit-keyframes resize-letter {
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes resize-letter {
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/*Ikona JS*/
+#JS-icon {
+  min-width: 88px;
+}
+
+#JS-icon:hover circle {
+  -webkit-transition: fill 0.6s ease-in-out;
+  transition: fill 0.6s ease-in-out;
+  fill: #f0db4f;
+}
+
+#JS-icon:hover #J-letter {
+  -webkit-animation: resize-letter 1.2s ease;
+          animation: resize-letter 1.2s ease;
+}
+
+#JS-icon:hover #S-letter {
+  -webkit-animation: resize-letter 1.2s ease;
+          animation: resize-letter 1.2s ease;
+}
+
+#J-letter,
+#S-letter {
+  -webkit-transform-origin: 50% 57%;
+          transform-origin: 50% 57%;
+}
+
+/*Ikona React*/
+#react-icon {
+  width: 75px;
+  padding-top: 8px;
+}
+
+#react-icon .st0 {
+  fill: black;
+}
+
+#react-icon:hover .st0 {
+  fill: #00d8ff;
+  -webkit-animation: rotateZ 5s ease;
+          animation: rotateZ 5s ease;
+}
+
+#react-icon:hover #circle {
+  -webkit-animation: resize-letter 5s ease;
+          animation: resize-letter 5s ease;
+}
+
+.st0,
+#circle {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@-webkit-keyframes rotateZ {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotateZ {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
